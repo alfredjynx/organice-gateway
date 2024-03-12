@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: organice-gateway
+
+  cloud:
+    discovery:
+      locator:
+        enabled: true
+    gateway:
+      routes:
+        - id: organice-auth
+          uri: lb://organice-auth
+          predicates:
+            - Path=/auth/**
+
+        - id: organice-account
+          uri: lb://organice-account
+          predicates:
+            - Path=/accounts/**
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka/}
+
+api:
+  endpoints:
+    open: >
+        ANY /auth/register,
+        POST /auth/login

@@ -1,0 +1,5 @@
+organice/gateway/GatewayConfiguration.class
+organice/gateway/GatewayResource.class
+organice/gateway/security/AuthenticationFilter.class
+organice/gateway/GatewayApplication.class
+organice/gateway/security/RouterValidator.class
