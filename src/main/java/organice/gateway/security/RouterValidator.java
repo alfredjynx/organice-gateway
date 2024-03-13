@@ -21,8 +21,8 @@ public class RouterValidator {
                 if (parts.length != 2) return false;
                 final String method = parts[0];
                 final String path = parts[1];
-                System.out.println("Method : [" + method + "] Path: [" + path + "]");
-                System.out.println("Request: [" + request.getMethod().toString() + "] Path: [" + request.getURI().getPath() + "]");
+                // System.out.println("Method : [" + method + "] Path: [" + path + "]");
+                // System.out.println("Request: [" + request.getMethod().toString() + "] Path: [" + request.getURI().getPath() + "]");
                 return (request.getMethod().toString().equalsIgnoreCase(method) || method.equalsIgnoreCase("ANY"))
                     && request.getURI().getPath().contains(path);
             });

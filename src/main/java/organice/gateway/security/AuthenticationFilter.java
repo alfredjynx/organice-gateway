@@ -28,7 +28,7 @@ public class AuthenticationFilter implements GlobalFilter {
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         final ServerHttpRequest request = exchange.getRequest();
-        System.out.println("AQUIIIII -> " +  (routerValidator.openApiEndpoints));
+        // System.out.println("AQUIIIII -> " +  (routerValidator.openApiEndpoints));
         // verificar se a rota eh segura
         if (!routerValidator.isSecured.test(request)) {
             return chain.filter(exchange);
