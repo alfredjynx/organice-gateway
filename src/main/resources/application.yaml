@@ -31,7 +31,7 @@ api:
         POST /auth/register,
         POST /auth/login,
         ANY /auth/actuator/**,
-        ANY /account/actuator/**
+        ANY /accounts/actuator/**
 
 management:
   endpoints:
