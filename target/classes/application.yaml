@@ -17,6 +17,11 @@ spring:
           uri: lb://organice-account
           predicates:
             - Path=/accounts/**
+        
+        - id: organice-lembrete
+          uri: lb://organice-lembrete
+          predicates:
+            - Path=/lembretes/**
 
 eureka:
   client:
