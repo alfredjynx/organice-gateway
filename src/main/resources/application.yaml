@@ -40,6 +40,7 @@ api:
     open: >
         POST /auth/register,
         POST /auth/login,
+        POST /lembretes/data,
         ANY /accounts/v3/api-docs,
         ANY /accounts/swagger-ui.html,
         ANY /auth/v3/api-docs,
@@ -51,7 +52,6 @@ api:
         ANY /auth/actuator/**,
         ANY /accounts/actuator/**,
         ANY /lembretes/actuator/**,
-        ANY /lembretes/data/actuator/**
         ANY /dia/actuator/**
 
 management:
