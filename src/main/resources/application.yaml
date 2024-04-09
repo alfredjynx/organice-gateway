@@ -23,6 +23,11 @@ spring:
           predicates:
             - Path=/lembretes/**
 
+        - id: organice-dia
+          uri: lb://organice-dia
+          predicates:
+            - Path=/dia/**
+
 eureka:
   client:
     register-with-eureka: true
@@ -35,9 +40,19 @@ api:
     open: >
         POST /auth/register,
         POST /auth/login,
+        ANY /accounts/v3/api-docs,
+        ANY /accounts/swagger-ui.html,
+        ANY /auth/v3/api-docs,
+        ANY /auth/swagger-ui.html,
+        ANY /lembretes/v3/api-docs,
+        ANY /lembretes/swagger-ui.html,
+        ANY /dia/v3/api-docs,
+        ANY /dia/swagger-ui.html,
         ANY /auth/actuator/**,
-        ANY /accounts/actuator/**
-        ANY /lembretes/actuator/**
+        ANY /accounts/actuator/**,
+        ANY /lembretes/actuator/**,
+        ANY /lembretes/data/actuator/**
+        ANY /dia/actuator/**
 
 management:
   endpoints:
