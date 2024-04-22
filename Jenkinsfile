@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('Build Discovery') {
+        stage('Build Auth') {
             steps {
-                build job: 'organice-discovery', wait: true
+                build job: 'organice-auth', wait: true
             }
         }
         stage('Jenkins Gateway') {
