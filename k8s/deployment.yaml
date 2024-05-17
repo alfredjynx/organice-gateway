@@ -1,21 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gateway-api
+  name: gateway
   labels:
-    app: gateway-api
+    app: gateway
 spec:
   replicas: 1
-  sector:
+  selector:
     matchLabels:
-      app: gateway-api
+      app: gateway
   template:
     metadata:
       labels:
-        app: gateway-api
+        app: gateway
     spec:
       containers:
-        - name: organice-api
-          image: alfredjynx/organice-gateway:latest
+        - name: gateway
+          image: humbertosandmann/gateway:latest
+          imagePullPolicy: Always
           ports:
-            - containerPort: 8080 
+            - containerPort: 8080
