@@ -27,6 +27,11 @@ spring:
           uri: lb://organice-dia
           predicates:
             - Path=/dia/**
+        
+        - id: organice-semana
+          uri: lb://organice-semana
+          predicates:
+            - Path=/semana/**
 
 eureka:
   client:
@@ -53,6 +58,10 @@ api:
         ANY /accounts/actuator/**,
         ANY /lembretes/actuator/**,
         ANY /dia/actuator/**
+        ANY /semana/v3/api-docs,
+        ANY /semana/swagger-ui.html,
+        ANY /semana/actuator/**
+
 
 management:
   endpoints:
