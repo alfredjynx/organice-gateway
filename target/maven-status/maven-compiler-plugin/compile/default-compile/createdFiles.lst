@@ -1,6 +1,6 @@
-organice\gateway\security\AuthenticationFilter.class
-organice\gateway\security\RouterValidator.class
-organice\gateway\security\GatewayCorsConfiguration.class
-organice\gateway\GatewayResource.class
-organice\gateway\GatewayConfiguration.class
-organice\gateway\GatewayApplication.class
+organice/gateway/GatewayResource.class
+organice/gateway/GatewayApplication.class
+organice/gateway/security/GatewayCorsConfiguration.class
+organice/gateway/GatewayConfiguration.class
+organice/gateway/security/AuthenticationFilter.class
+organice/gateway/security/RouterValidator.class
